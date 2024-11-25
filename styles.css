@@ -1,0 +1,66 @@
+/* General body styles */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f3f3f3;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Container for the photo stack */
+  .container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  /* Stacked Polaroid-style photos */
+  .photo-stack {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px; /* Width of a single photo */
+    height: 250px; /* Height of a single photo */
+  }
+  
+  /* Individual photo styles */
+  .photo {
+    position: absolute; /* Makes photos stack perfectly on top of each other */
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 250px;
+    cursor: grab;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 5px solid #fff;
+  }
+  
+  /* Captions below each photo */
+  .caption {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.6); /* Transparent black background */
+    color: #fff; /* White text */
+    font-size: 12px;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
